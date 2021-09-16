@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="Перввый документ html">
+		<title>Первый документ html</title>
+		<link rel="stylesheet" type="text/css" href="index.css"/>
+	</head>
+	<body>
+		<header>
+			<h1>НАЧАЛО В <mark>HTML5</mark></h1>
+			<nav style="margin-left:45%">
+				<ul>
+					<li><a href="#introduction">Введение</a></li>
+					<li><a href="#theory">Теория</a></li>
+					<li><a href="#examples">Примеры</a></li>
+					<li><a href="#books">Интересные книги по теме</a></li>
+				</ul>
+			</nav>
+		</header>
+		<div class="content">
+			<img src="https://i.pinimg.com/originals/96/4a/96/964a96f5b6793957e0c5342f42e04e6b.jpg" 
+				 width="30%" height="30%"  alt="Джокер">
+			<section id="introduction">		
+				<h2>Введение</h2>
+				<p class="under">Тут должна быть вводная часть.</p>
+			</section>
+			<section>
+				<section id="theory">
+					<h2>Теория</h2>
+					<p>Какая - то теоретическая <b>информация.</b>
+	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has 
+	been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+	scrambled it to make a type specimen book. <i>It has survived not only five centuries, but also the leap into
+	electronic typesetting, remaining essentially unchanged.</i> It was popularised in the 1960s with the release
+	of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+	Aldus PageMaker including versions of Lorem Ipsum.				
+					</p>
+				</section>
+				<aside style="float:right; margin-right: 0.5%">
+					<table>
+						<caption><b>Просто таблица</b></caption>
+						<thead>
+							<tr>
+								<th>Первый столбец</th> <th>Второй столбец</th> <th>Третий столбец</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="bg_red" rowspan="2">1</td> <td>2</td> <td>3</td>
+							</tr>
+							<tr>
+								<td>4<sup>*</sup></td> <td>5</td>
+							</tr>
+							<tr>
+								<td>6</td> <td class="bg_green" colspan="2">7</td>
+							</tr>
+						</tbody>
+					</table>
+					<small><sup>*</sup>какое - то пояснение</small>
+				</aside>
+				<section id="examples">
+					<h3>Примеры</h3>
+					<p>Большое количество<br>разнообразных <span style="color:red">примеров</span>.
+						<pre>Которые
+			содержат
+				заранее 
+					отформатированный 
+						текст.</pre>
+					</p>
+					<p><del>И пример того, как делать не надо.</del></p>
+				</section>
+				<section id="books">
+					<h3>Здесь может быть список интересных книг по теме</h3>
+					<ul style="list-style-type:square">
+						<li>Книга №1</li>
+						<li>Книга №2</li>
+						<li>Книга №3</li>
+						<li>Книга №4</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<footer>
+			<p><a href="https://www.tsu.ru/" target="_blank"><small>Сайт ТГУ</small></a></p>
+			<address>
+				<small>Контакты для связи: aleksey_s@sibmail.com</small>
+			</address>
+			<p style="color:black"><small>Copyright &copy MySite.com, 2021.</small></p>
+		</footer>		
+	</body>	
