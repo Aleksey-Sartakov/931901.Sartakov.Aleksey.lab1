@@ -1,0 +1,91 @@
+<!DOCKTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+    <title>Task 2.7</title>
+	<style type="text/css">
+		*{
+			color: white;
+		}
+		div{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			margin: 0;
+		}
+		p{
+			margin: 0;
+		}
+		.pink{
+			background: #8b27e3;
+			position: static;
+			width: 10em;
+			height: 5em;
+			border: solid 1px #8b27e3;
+		}
+		.red{
+			background: #8c0000;
+			position: relative;
+			width: 10em;
+			height: 5em;
+			border: solid 1px #8c0000;
+		}
+		.orange{
+			background: #ce863d;
+			position: relative;
+			width: 10em;
+			height: 5em;
+			border: solid 1px #ce863d;
+			top: -2em;
+			left: 2em;
+		}
+		.bisque{
+			background: #ce5c5c;
+			position: relative;
+			width: 36em;
+			height: 20em;
+			border: solid 1px #ce5c5c;
+		}
+		.purple{
+			background: #4a0083;
+			position: absolute;
+			width: 18em;
+			height: 10em;
+			border: solid 1px #4a0083;
+			bottom: 20%;
+			left: 50%;
+		}
+		.green{
+			background: #1c8c1c;
+			position: fixed;
+			width: 6.5em;
+			height: 6.5em;
+			border: solid 1px #1c8c1c;
+			bottom: 0;
+			right:0;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="green">
+		<p>It's a fixed div!</p>
+	</div>
+	<div class="pink">
+		<p>It's a static div!</p>
+	</div>
+	<div class="red">
+		<p>It's a relative div!</p>
+	</div>
+	<div class="orange">
+		<p>It's a relative div!</p>
+	</div>
+	<div class="bisque">
+		<p>It's a relative div!</p>
+		<div class="purple">
+			<p>It's an absolute div with relative parent!</p>
+		</div>
+	</div>
+</body>
+</html>
