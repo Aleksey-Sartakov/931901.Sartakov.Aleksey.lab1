@@ -1,65 +1,115 @@
 *{
-	font-family: helvetica;
+	font-family: verdana, helvetica;
+	font-size: 14px;
 }
-body, div, p{
-	margin: 0;
+body{
 	padding: 0;
+	margin: 0;
+	background: #eeeff0;
+}
+div{
+}
+section{
+	margin: 1em;
+}
+p{
+	margin-top: 0;
+	margin-bottom: 0.5em;
+}
+p::selection{
+	background: #e1e1e1;
+	color: green;
+}
+a{
+	text-decoration: none;
+	color: #4f739a;
+}
+ul li{
+	padding: 0.5em;
+}
+h1, h2, h3, h4{
+	margin-top: 1em;
 }
 header{
-	background: green;
-	color: white;
+	background: #4f739a;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding-top: 0.6em;
+	padding-bottom: 0.6em;
+}
+footer{
+	background: white;
+	color: grey;
 	text-align: center;
 }
-header h1{
-	padding-top: 0.2em;
-	padding-bottom: 0.2em;
-	margin: 0
-}
-.content{
-	max-width: 900px;
-	min-height: 91.3%;
-	position: relative;
+.main{
+	max-width: 1000px;
 	margin: 0 auto;
-}
-a::selection, p::selection {
-	background: green;
-	color: white;
+	margin-top: 60px;
 }
 .menu{
 	float: left;
-	background: red;
-	color: white;
-	position: absolute;
-	width: 12em;
-	top: 0;
-	bottom: 0;
+	width: 16em;
+	padding-right: 1em;
 }
 .menu ul{
 	list-style: none;
-	padding-left: 3em;
-	padding-top: 1em;
-	padding-right: 1em;
+	margin: 0;
 }
-li{
-	margin-bottom: 0.5em;
+.menu ul li:hover{
+	background: #e2e6ec;
 }
-ul a{
-	color: white;
+.ad_block{
+	position: fixed;
+	left: 1200px;
+	top: 50px;
 }
-.main{
-	padding-top: 2em;
-	padding-left: 14em;
-	padding-right: 2em;
+.ad_block section{
+	width: 140px;
+	background: white;
+	border: solid 2px #e1e1e1;
+	border-radius: 10px;
+	padding: 1em;
+}
+.ad_block p{
+	background: #eeeff0;
+	margin: 1em auto;
+}
+.content{
+	margin-left: 17em;
+}
+.content section{
+	max-width: 400px;
+	border: solid 2px #e1e1e1;
+	border-radius: 15px;
+	background: white;
+	padding: 1em;
 	text-align: justify;
 }
-footer{
-	background: black;
-	color: white;
-	text-align: center;
-	clear: both;
+.content section img{
+	width: 100%;
 }
-footer h3{
-	padding-top: 0.2em;
-	padding-bottom: 0.2em;
-	margin: 0;
+.like_comm{
+	padding-bottom: 1em;
+}
+.underlined{
+	border-bottom: solid 5px #e1e1e1;
+	padding-bottom: 0.5em;
+}
+@media (max-width: 768px){
+	.menu{
+		float: none;
+		margin: 0 auto 2em;
+		padding-right: 0;
+		width: 100%;
+	}
+	.menu ul li{
+		display: inline-block;
+		margin-bottom: 1em;
+	}
+	.content{
+		margin: 0 auto;
+	}
 }
