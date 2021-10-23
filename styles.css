@@ -7,8 +7,6 @@ body{
 	margin: 0;
 	background: #eeeff0;
 }
-div{
-}
 section{
 	margin: 1em;
 }
@@ -79,6 +77,7 @@ footer{
 }
 .content{
 	margin-left: 17em;
+	max-width: 500px;
 }
 .content section{
 	max-width: 400px;
@@ -102,8 +101,11 @@ footer{
 	.menu{
 		float: none;
 		margin: 0 auto 2em;
-		padding-right: 0;
 		width: 100%;
+		text-align: center;
+	}
+	.menu ul{
+		padding: 0;
 	}
 	.menu ul li{
 		display: inline-block;
@@ -111,5 +113,8 @@ footer{
 	}
 	.content{
 		margin: 0 auto;
+	}
+	section{
+		margin: 1em auto;
 	}
 }
