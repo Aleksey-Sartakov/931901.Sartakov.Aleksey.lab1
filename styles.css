@@ -40,6 +40,9 @@ a::selection, p::selection {
 	padding-top: 1em;
 	padding-right: 1em;
 }
+.menu ul li:hover{
+	background-color: green;
+}
 li{
 	margin-bottom: 0.5em;
 }
