@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta charset="utf-8"/>
+   <title>Task №5</title>
+   <script src=""></script>
+   <style>
+      body, div, h2{
+         margin: 0;
+         padding: 0;
+         font-family: Arial, Helvetica, sans-serif;
+      }
+      p{
+         margin: 0.5em;
+      }
+      .newsBlock{
+         max-width: 800px;
+         margin: 0 auto;
+         padding: 1em;
+         background-color: rgb(166, 252, 252);
+         border-bottom:solid 3px black;
+      }
+      #bgNews1, #bgNews2, #bgNews3{
+         display: none;
+         position: absolute;
+         top: 0;
+         bottom: 0;
+         left: 0;
+         right: 0;
+         background-color: rgba(255, 249, 249, 0.5);
+      }
+      .fullNews1, .fullNews2, .fullNews3{
+         position: absolute;
+         width: 400px;
+         top: 30%;
+         left: 0;
+         right: 0;
+         margin: auto;
+         padding: 1em;
+         background-color: #e2ff74;
+         box-shadow: 0 0 1000 400 white;
+      }
+      button{
+
+         border: solid 1px black;
+         background-color: #03d103;
+         color: white;
+         padding: 0.5em;
+      }
+      .button{
+         text-align: center;
+      }
+   </style>
+ </head>
+ <body>
+    <div id="bgNews1">
+       <div class="fullNews1">
+           <h1 style="text-align: center;">Новость 1</h1>
+           <p>
+              Новость 1: Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam hic, ipsa, ullam, cupiditate
+              eveniet at voluptate corrupti commodi nobis ratione voluptatem!
+           </p>
+           <p> 
+              Vel animi totam cupiditate doloribus ad ab exercitationem officia eveniet impedit? Deleniti quasi nisi
+              consectetur perspiciatis quibusdam nostrum, enim perferendis nam, magni molestias recusandae id libero
+              vitae, repudiandae praesentium.
+           </p>
+       </div>
+    </div>
+    <div id="bgNews2">
+       <div class="fullNews2">
+          <h1 style="text-align: center;">Новость 2</h1>
+          <p>
+             Новость 1: Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam hic, ipsa, ullam, cupiditate
+             eveniet at voluptate corrupti commodi nobis ratione voluptatem!
+          </p>
+          <p> 
+             Vel animi totam cupiditate doloribus ad ab exercitationem officia eveniet impedit? Deleniti quasi nisi
+             consectetur perspiciatis quibusdam nostrum, enim perferendis nam, magni molestias recusandae id libero
+             vitae, repudiandae praesentium.
+          </p>
+       </div>
+    </div>
+    <div id="bgNews3">
+       <div class="fullNews3">
+          <h1 style="text-align: center;">Новость 3</h1>
+          <p>
+             Новость 1: Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam hic, ipsa, ullam, cupiditate
+             eveniet at voluptate corrupti commodi nobis ratione voluptatem!
+          </p>
+          <p> 
+             Vel animi totam cupiditate doloribus ad ab exercitationem officia eveniet impedit? Deleniti quasi nisi
+             consectetur perspiciatis quibusdam nostrum, enim perferendis nam, magni molestias recusandae id libero
+             vitae, repudiandae praesentium.
+          </p>
+       </div>
+    </div>
+   <div class="newsBlock">
+      <h2>Новость 1</h2>
+      <p>
+         Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet asperiores aut nihil! Corporis
+         debitis labore fugiat id, eligendi ratione veritatis!
+      </p>
+   <div class="button">
+      <button class="bgNews1"><small>Открыть всплывающее окно</small></button>
+   </div>
+   </div>
+   <div class="newsBlock">
+      <h2>Новость 2</h2>
+      <p>
+         Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet asperiores aut nihil! Corporis
+         debitis labore fugiat id, eligendi ratione veritatis!
+      </p>
+      <div class="button">
+         <button class="bgNews2"><small>Открыть всплывающее окно</small></button>
+      </div>   
+   </div>
+   <div class="newsBlock">
+      <h2>Новость 3</h2>
+      <p>
+         Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet asperiores aut nihil! Corporis
+         debitis labore fugiat id, eligendi ratione veritatis!
+      </p>
+      <div class="button">
+         <button class="bgNews3"><small>Открыть всплывающее окно</small></button>
+      </div>   
+   </div>
+   <script>
+      function ShowNews(e)
+      {
+         var elem = document.getElementById(this.className);
+         elem.style.display = "block";
+      }
+      function SetbgRed(e)
+      {
+         this.style.backgroundColor = "#ff5454";
+      }
+      function SetbgBlue(e)
+      {
+         this.style.backgroundColor = "rgb(166, 252, 252)";
+      }
+      function HideNews(e)
+      {
+         this.style.display = "none";
+      }
+      var buttonNews1 = document.getElementsByClassName("bgNews1"),
+          buttonNews2 = document.getElementsByClassName("bgNews2"),
+          buttonNews3 = document.getElementsByClassName("bgNews3");
+      buttonNews1[0].addEventListener("click", ShowNews);
+      buttonNews2[0].addEventListener("click", ShowNews);
+      buttonNews3[0].addEventListener("click", ShowNews);
+      var newsBlocks = document.getElementsByClassName("newsBlock");
+      for (block of newsBlocks)
+      {
+         block.addEventListener("mouseover", SetbgRed);
+         block.addEventListener("mouseout", SetbgBlue);
+      }
+      var
+         bgnews1 = document.getElementById("bgNews1"),
+         bgnews2 = document.getElementById("bgNews2"),
+         bgnews3 = document.getElementById("bgNews3");
+      bgnews1.addEventListener("click", HideNews);
+      bgnews2.addEventListener("click", HideNews);
+      bgnews3.addEventListener("click", HideNews);
+   </script>
+ </body>
+</html>
