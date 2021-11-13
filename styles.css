@@ -1,120 +1,61 @@
-*{
-	font-family: verdana, helvetica;
-	font-size: 14px;
-}
 body{
-	padding: 0;
-	margin: 0;
-	background: #eeeff0;
+    margin: 0;
+    padding: 0;
 }
-section{
-	margin: 1em;
+div{
+    margin: 0;
 }
-p{
-	margin-top: 0;
-	margin-bottom: 0.5em;
+form{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
 }
-p::selection{
-	background: #e1e1e1;
-	color: green;
+form button{
+    margin: 0;
+    color: white;
+    background-color: red;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    width: 33%;
+    height: 2em;
+    border: solid 2px black;
 }
-a{
-	text-decoration: none;
-	color: #4f739a;
+img{
+    width: 90%;
+    margin-top: 1em;
+    margin-left: 5%;
+    height: 70%;
 }
-ul li{
-	padding: 0.5em;
-}
-h1, h2, h3, h4{
-	margin-top: 1em;
-}
-header{
-	background: #4f739a;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	padding-top: 0.6em;
-	padding-bottom: 0.6em;
-}
-footer{
-	background: white;
-	color: grey;
-	text-align: center;
+#middle{
+    width: 34%;
 }
 .main{
-	max-width: 1000px;
-	margin: 0 auto;
-	margin-top: 60px;
+    width: 50%;
+    margin: 0 auto;
 }
-.menu{
-	float: left;
-	width: 16em;
-	padding-right: 1em;
+.blue_block{
+    float: left;
+    width: 50%;
+    height: 30em;
+    background-color: blue;
 }
-.menu ul{
-	list-style: none;
-	margin: 0;
+.green_block{
+    float: right;
+    width: 50%;
+    height: 30em;
+    background-color: green;
+    
 }
-.menu ul li:hover{
-	background: #e2e6ec;
+.extended{
+    width: 90%;
 }
-.ad_block{
-	position: fixed;
-	left: 1200px;
-	top: 50px;
+.extended img{
+    width: 70%;
 }
-.ad_block section{
-	width: 140px;
-	background: white;
-	border: solid 2px #e1e1e1;
-	border-radius: 10px;
-	padding: 1em;
+.narrowed{
+    width: 10%;
 }
-.ad_block p{
-	background: #eeeff0;
-	margin: 1em auto;
-}
-.content{
-	margin-left: 17em;
-	max-width: 500px;
-}
-.content section{
-	max-width: 400px;
-	border: solid 2px #e1e1e1;
-	border-radius: 15px;
-	background: white;
-	padding: 1em;
-	text-align: justify;
-}
-.content section img{
-	width: 100%;
-}
-.like_comm{
-	padding-bottom: 1em;
-}
-.underlined{
-	border-bottom: solid 5px #e1e1e1;
-	padding-bottom: 0.5em;
-}
-@media (max-width: 768px){
-	.menu{
-		float: none;
-		margin: 0 auto 2em;
-		width: 100%;
-		text-align: center;
-	}
-	.menu ul{
-		padding: 0;
-	}
-	.menu ul li{
-		display: inline-block;
-		margin-bottom: 1em;
-	}
-	.content{
-		margin: 0 auto;
-	}
-	section{
-		margin: 1em auto;
-	}
+.narrowed > *{
+    display: none;
 }
