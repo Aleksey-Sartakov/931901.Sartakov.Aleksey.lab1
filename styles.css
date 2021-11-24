@@ -1,61 +1,21 @@
-body{
-    margin: 0;
-    padding: 0;
+.square{
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: red;
 }
-div{
-    margin: 0;
+.triangle{
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-bottom: 140px solid blue;
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
 }
-form{
-    width: 100%;
-    margin: 0;
-    padding: 0;
-
-}
-form button{
-    margin: 0;
-    color: white;
-    background-color: red;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.5em;
-    width: 33%;
-    height: 2em;
-    border: solid 2px black;
-}
-img{
-    width: 90%;
-    margin-top: 1em;
-    margin-left: 5%;
-    height: 70%;
-}
-#middle{
-    width: 34%;
-}
-.main{
-    width: 50%;
-    margin: 0 auto;
-}
-.blue_block{
-    float: left;
-    width: 50%;
-    height: 30em;
-    background-color: blue;
-}
-.green_block{
-    float: right;
-    width: 50%;
-    height: 30em;
-    background-color: green;
-    
-}
-.extended{
-    width: 90%;
-}
-.extended img{
-    width: 70%;
-}
-.narrowed{
-    width: 10%;
-}
-.narrowed > *{
-    display: none;
+.circle{
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: green;
+    border-radius: 60px;
 }
