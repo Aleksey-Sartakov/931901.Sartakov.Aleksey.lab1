@@ -1,93 +1,47 @@
-const max_figure_size = 300;
-const min_figure_size = 50;
-const doc_width = $(document).width() - 300;
-const doc_height = $(document).height() - 300;
+const row = `<tr>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><button class="up">↑</button></td>
+                <td><button class="down">↓</button></td>
+                <td><button class="delete">x</button></td>
+            </tr>`;
 
-
-function GetRandomInt(min, max) {
-    return Math.floor(Math.random() * (max - min)) + min;
-}
-
-
-$("input[name='square']").click(function () {
-    let quantity_of_elem = $("input[name='quantity_of_elem']").val();
-    let X, Y, size;
-    for (let i = 0; i < quantity_of_elem; i++) {
-        let elem = document.createElement('div');
-        $(elem).addClass('square');
-        $(elem).addClass('geom_fig');
-        size = GetRandomInt(min_figure_size, max_figure_size);
-        X = String(GetRandomInt(0, doc_width)) + 'px';
-        Y = String(GetRandomInt(100, doc_height)) + 'px';
-        $(elem).width(String(size) + 'px');
-        $(elem).height(String(size) + 'px');
-        $(elem).css('left', X);
-        $(elem).css('top', Y);
-        $('body').append(elem);
-    }
+$('.add').click(function () {
+    $('table').append(row);
 })
 
-$("input[name='triangle']").click(function () {
-    let quantity_of_elem = $("input[name='quantity_of_elem']").val();
-    let X, Y, size;
-    for (let i = 0; i < quantity_of_elem; i++) {
-        let elem = document.createElement('div');
-        $(elem).addClass('triangle');
-        $(elem).addClass('geom_fig');
-        size = GetRandomInt(min_figure_size, max_figure_size);
-        X = String(GetRandomInt(0, doc_width)) + 'px';
-        Y = String(GetRandomInt(100, doc_height)) + 'px';
-        $(elem).css('border-bottom', String(size) + 'px solid blue');
-        $(elem).css('border-left', String(size / 2) + 'px solid transparent');
-        $(elem).css('border-right', String(size / 2) + 'px solid transparent');
-        $(elem).css('left', X);
-        $(elem).css('top', Y);
-        $('body').append(elem);
-    }
+$('body').delegate('.delete', 'click', function (e) {
+    console.log('hi');
+
+    $(this).parent().parent().remove();
 })
 
-$("input[name='circle']").click(function () {
-    let quantity_of_elem = $("input[name='quantity_of_elem']").val();
-    let X, Y, size;
-    for (let i = 0; i < quantity_of_elem; i++) {
-        let elem = document.createElement('div');
-        $(elem).addClass('circle');
-        $(elem).addClass('geom_fig');
-        size = GetRandomInt(min_figure_size, max_figure_size);
-        X = String(GetRandomInt(0, doc_width)) + 'px';
-        Y = String(GetRandomInt(100, doc_height)) + 'px';
-        $(elem).width(String(size) + 'px');
-        $(elem).height(String(size) + 'px');
-        $(elem).css('border-radius', String(size / 2) + 'px')
-        $(elem).css('left', X);
-        $(elem).css('top', Y);
-        $('body').append(elem);
-    }
+$('body').delegate('.up', 'click', function (e) {
+    $(this).parent().parent().prev().before($(this).parent().parent().detach())
 })
 
-$('body').delegate('.square', 'click', function (e) {
-    if (e.detail === 1) {
-        $(this).css('background-color', 'yellow');
+$('body').delegate('.down', 'click', function (e) {
+    let cur_row = $(this).parent().parent();
+    let last_row = $('tr').last();
+    if (cur_row.is(last_row)) {
     }
-    else if (e.detail === 2) {
-        $(this).remove();
-    }
-})
-
-$('body').delegate('.circle', 'click', function (e) {
-    if (e.detail === 1) {
-        $(this).css('background-color', 'yellow');
-    }
-    else if (e.detail === 2) {
-        $(this).remove();
+    else {
+        $(cur_row).next().after(cur_row.detach());
+        console.log('bebe');
     }
 })
-
-$('body').delegate('.triangle', 'click', function (e) {
-    if (e.detail === 1) {
-        $(this).css('border-bottom-color', 'yellow');
+$('.save').click(function () {
+    let data = {};
+    for (let row of $('tr')) {
+        let first_col = $(row).children()[0];
+        let second_col = $(row).children()[1];
+        let key = $(first_col).children().first().val();
+        let value = $(second_col).children().first().val();
+        if ((key != "") && (value != "")) {
+            data[key] = value;
+        }
     }
-    else if (e.detail === 2) {
-        $(this).remove();
-    }
-})
+    let result = document.createElement('div');
+    result.innerText = JSON.stringify(data);
+    $('body').append(result);
+});
