@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Task 9</title>
+    <meta charset="utd-8">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.0.0/math.js"></script>
+</head>
+
+<body>
+    <form>
+        <table>
+            <tr>
+                <td colspan="5"><input class="expression" placeholder="0" /></td>
+            </tr>
+            <tr>
+                <td><button type="button" class="add_sym" value="7">7</button></td>
+                <td><button type="button" class="add_sym" value="8">8</button></td>
+                <td><button type="button" class="add_sym" value="9">9</button></td>
+                <td><button type="button" class="add_sym" value="/">/</button></td>
+                <td><button type="reset">C</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" class="add_sym" value="4">4</button></td>
+                <td><button type="button" class="add_sym" value="5">5</button></td>
+                <td><button type="button" class="add_sym" value="6">6</button></td>
+                <td><button type="button" class="add_sym" value="*">*</button></td>
+                <td><button type="button" class="del_last_sym">&#60-</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" class="add_sym" value="1">1</button></td>
+                <td><button type="button" class="add_sym" value="2">2</button></td>
+                <td><button type="button" class="add_sym" value="3">3</button></td>
+                <td><button type="button" class="add_sym" value="-">-</button></td>
+                <td rowspan="2"><button type="button" class="result">=</button></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button type="button" class="add_sym" value="0">0</button></td>
+                <td><button type="button" class="add_sym" value=".">.</button></td>
+                <td><button type="button" class="add_sym" value="+">+</button></td>
+            </tr>
+        </table>
+    </form>
+</body>
