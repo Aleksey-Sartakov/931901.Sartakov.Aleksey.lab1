@@ -27,7 +27,6 @@ $('body').delegate('.down', 'click', function (e) {
     }
     else {
         $(cur_row).next().after(cur_row.detach());
-        console.log('bebe');
     }
 })
 $('.save').click(function () {
